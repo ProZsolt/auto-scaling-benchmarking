@@ -3,7 +3,7 @@ class Pmax
     @window = window
   end
   def predict metrics
-    window = [@window, metrics.length]
+    window = [@window, metrics.length].min
     metrics.last(window).max
   end
 end

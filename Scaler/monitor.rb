@@ -35,17 +35,17 @@ class Monitor
     stats
   end
 
-  def fetch_elb_stats(lb_name, metric_name, stats)
-    fetch_cw_stats("AWS/ELB", metric_name, stats, [{:name=>"LoadBalancerName", :value=>lb_name}])
+  def fetch_elb_stats(metric_name, stats)
+    fetch_cw_stats("AWS/ELB", metric_name, stats, [{:name=>"LoadBalancerName", :value=>@lb_name}])
   end
 
   def get_latency
-    stats = fetch_elb_stats(lb_name, "Latency", ['Average'])
+    stats = fetch_elb_stats("Latency", ['Average'])
     stats[:datapoints][-1][:average] if stats
   end
 
   def get_request_count
-    stats = fetch_elb_stats(lb_name, "RequestCount", ['Sum'])
+    stats = fetch_elb_stats("RequestCount", ['Sum'])
     if stats
       return stats[:datapoints][-1][:sum].to_i
     else
@@ -54,32 +54,32 @@ class Monitor
   end
 
   def get_HTTPCode_Backend_2XX
-    stats = fetch_elb_stats(lb_name, "HTTPCode_Backend_2XX", ['Sum'])
+    stats = fetch_elb_stats("HTTPCode_Backend_2XX", ['Sum'])
     stats[:datapoints][-1][:sum].to_i if stats
   end
 
   def get_HTTPCode_Backend_5XX
-    stats = fetch_elb_stats(lb_name, "HTTPCode_Backend_5XX", ['Sum'])
+    stats = fetch_elb_stats("HTTPCode_Backend_5XX", ['Sum'])
     stats[:datapoints][-1][:sum].to_i if stats
   end
 
   def get_HTTPCode_ELB_5XX
-    stats = fetch_elb_stats(lb_name, "HTTPCode_ELB_5XX", ['Sum'])
+    stats = fetch_elb_stats("HTTPCode_ELB_5XX", ['Sum'])
     stats[:datapoints][-1][:sum].to_i if stats
   end
 
   def get_backend_connection_errors
-    stats = fetch_elb_stats(lb_name, "BackendConnectionErrors", ['Sum'])
+    stats = fetch_elb_stats("BackendConnectionErrors", ['Sum'])
     stats[:datapoints][-1][:sum].to_i if stats
   end
 
   def get_queue_length
-    stats = fetch_elb_stats(lb_name, "SurgeQueueLength", ['Maximum'])
+    stats = fetch_elb_stats("SurgeQueueLength", ['Maximum'])
     stats[:datapoints][-1][:sum].to_i if stats
   end
 
   def get_spillover_count
-    stats = fetch_elb_stats(lb_name, "SpilloverCount", ['Sum'])
+    stats = fetch_elb_stats("SpilloverCount", ['Sum'])
     stats[:datapoints][-1][:sum].to_i if stats
   end
 end

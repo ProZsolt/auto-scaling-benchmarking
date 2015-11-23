@@ -3,7 +3,7 @@ class Pmean
     @window = window
   end
   def predict metrics
-    window = [@window, metrics.length]
+    window = [@window, metrics.length].min
     metrics.last(window).inject(:+)/window
   end
 end
