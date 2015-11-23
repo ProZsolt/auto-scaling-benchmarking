@@ -17,7 +17,10 @@ class CloudProvision
       p @metrics
       prediction = @predictor.predict (@metrics)
       p prediction
-      @controller.set_capacity ((prediction/(7.0*300.0)).ceil)
+      capacity = (prediction/(7.0*300.0)).ceil
+      capacity = [capacity, 1].max
+      capacity = [capacity, 5].min
+      @controller.set_capacity (capacity)
       sleep 300
     end
   end
