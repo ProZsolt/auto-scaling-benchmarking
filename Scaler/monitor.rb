@@ -46,7 +46,11 @@ class Monitor
 
   def get_request_count
     stats = fetch_elb_stats(lb_name, "RequestCount", ['Sum'])
-    stats[:datapoints][-1][:sum].to_i if stats
+    if stats
+      return stats[:datapoints][-1][:sum].to_i
+    else
+      return 0
+    end
   end
 
   def get_HTTPCode_Backend_2XX
