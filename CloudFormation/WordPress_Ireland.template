@@ -11,6 +11,11 @@
       "ConstraintDescription" : "must be the name of an existing EC2 KeyPair."
     },
 
+    "GraphiteServer": {
+      "Description" : "Graphite host",
+      "Type": "String"
+    },
+
     "InstanceType" : {
       "Description" : "WebServer EC2 instance type",
       "Type" : "String",
@@ -356,6 +361,31 @@
                 "httpd" : { "enabled" : "true", "ensureRunning" : "true" }
               }
             }
+          },
+
+          "install_collectd" : {
+            "packages" : {
+              "yum" : {
+                "collectd"       : [],
+                "collectd-utils" : []
+              }
+            },
+            "files" : {
+              "/etc/collectd/collectd.conf" : {
+                "content" : { "Fn::Join" : [ "", [
+                ]]},
+                "mode" : "000500",
+                "owner" : "root",
+                "group" : "root"
+              },
+              "/etc/apache2/sites-available/apache2-graphite.conf" : {
+                "content" : { "Fn::Join" : [ "", [
+
+                ]]},
+                "mode" : "000500",
+                "owner" : "root",
+                "group" : "root"
+              }
           }
         }
       },
