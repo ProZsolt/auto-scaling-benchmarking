@@ -705,12 +705,11 @@
           "install_collectd": {
             "packages": {
               "yum": {
-                "collectd": [],
-                "collectd-utils": []
+                "collectd": []
               }
             },
             "files": {
-              "/etc/collectd/collectd.conf": {
+              "/etc/collectd.conf": {
                 "content": {
                   "Fn::Join": [
                     "",
@@ -731,14 +730,11 @@
                       "AlwaysAppendDS false\n",
                       "EscapeCharacter \"_\"\n",
                       "</Node>\n",
-                      "</Plugin>\n",
-                      "<Include \"/etc/collectd/collectd.conf.d\">\n",
-                      "Filter \"*.conf\"\n",
-                      "</Include>\n"
+                      "</Plugin>\n"
                     ]
                   ]
                 },
-                "mode": "000500",
+                "mode": "000644",
                 "owner": "root",
                 "group": "root"
               }
