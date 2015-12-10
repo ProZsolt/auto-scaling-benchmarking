@@ -16,37 +16,37 @@ to desired shape.</stringProp>
     <hashTree>
       <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="jp@gc - Throughput Shaping Timer" enabled="true">
         <collectionProp name="load_profile">
-          <collectionProp name="1922421152">
+          <collectionProp name="1925085633">
             <stringProp name="49">1</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="48625">100</stringProp>
           </collectionProp>
-          <collectionProp name="1840715010">
+          <collectionProp name="1925978402">
             <stringProp name="53">5</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="48625">100</stringProp>
           </collectionProp>
-          <collectionProp name="1840763866">
+          <collectionProp name="-636065055">
             <stringProp name="55">7</stringProp>
             <stringProp name="1567">10</stringProp>
             <stringProp name="48625">100</stringProp>
           </collectionProp>
-          <collectionProp name="1842259307">
+          <collectionProp name="1542671659">
             <stringProp name="1567">10</stringProp>
             <stringProp name="1567">10</stringProp>
             <stringProp name="48780">150</stringProp>
           </collectionProp>
-          <collectionProp name="57573632">
+          <collectionProp name="-241059712">
             <stringProp name="1572">15</stringProp>
             <stringProp name="1572">15</stringProp>
             <stringProp name="1567">10</stringProp>
           </collectionProp>
-          <collectionProp name="57622910">
+          <collectionProp name="-1974766313">
             <stringProp name="1567">10</stringProp>
             <stringProp name="55">7</stringProp>
             <stringProp name="1815">90</stringProp>
           </collectionProp>
-          <collectionProp name="58743288">
+          <collectionProp name="141413313">
             <stringProp name="55">7</stringProp>
             <stringProp name="49">1</stringProp>
             <stringProp name="1691">50</stringProp>
@@ -160,7 +160,7 @@ and produce their last samples all together without limitations.</stringProp>
               </elementProp>
               <elementProp name="graphiteHost" elementType="Argument">
                 <stringProp name="Argument.name">graphiteHost</stringProp>
-                <stringProp name="Argument.value">0fda0fb0.carbon.hostedgraphite.com</stringProp>
+                <stringProp name="Argument.value">bbdf6743.carbon.hostedgraphite.com</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="graphitePort" elementType="Argument">
@@ -170,7 +170,7 @@ and produce their last samples all together without limitations.</stringProp>
               </elementProp>
               <elementProp name="rootMetricsPrefix" elementType="Argument">
                 <stringProp name="Argument.name">rootMetricsPrefix</stringProp>
-                <stringProp name="Argument.value">feb968c2-bf54-44f4-8e77-be2008005652.jmeter.</stringProp>
+                <stringProp name="Argument.value">2fe00e69-0a9b-4fad-8f84-6bb72044576b.jmeter.</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="summaryOnly" elementType="Argument">
