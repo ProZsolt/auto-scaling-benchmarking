@@ -1,27 +1,19 @@
 require_relative "monitor.rb"
 require_relative "controller.rb"
-require_relative "predictor.rb"
-require_relative "mean.rb"
+require_relative "rule_based.rb"
+require_relative "exp_smoothing.rb"
 
 class CloudProvision
   def initialize
-    @metrics = []
-    @monitor = Monitor.new 'WordPress-ElasticL-ZK36H53W0LQZ'
-    @predictor = Pmean.new 8
-    @controller = Controller.new 'WordPress-sample-scalable-WebServerGroup-19PVWDVMFLKMZ'
+    @monitor = Monitor.new "bbdf6743/97ea2d09-8709-41b3-a9f7-b9d0da435bea"
+    @controller = Controller.new "wordpress-WebServerGroup-1NGZTOQGAAR5A"
+    @scaler = RuleBased.new @monitor, @controller
+    #@scaler = ExpSmoothing.new @monitor, @controller
   end
 
   def run_scaler
     while true do
-      @metrics.push(@monitor.get_request_count)
-      p @metrics
-      prediction = @predictor.predict (@metrics)
-      p prediction
-      capacity = (prediction/(7.0*300.0)).ceil
-      capacity = [capacity, 1].max
-      capacity = [capacity, 5].min
-      @controller.set_capacity (capacity)
-      sleep 300
+      @scaler.scale
     end
   end
 

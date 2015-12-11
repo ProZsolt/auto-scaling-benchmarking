@@ -16,37 +16,37 @@ to desired shape.</stringProp>
     <hashTree>
       <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="jp@gc - Throughput Shaping Timer" enabled="true">
         <collectionProp name="load_profile">
-          <collectionProp name="1925085633">
+          <collectionProp name="1922421152">
             <stringProp name="49">1</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="48625">100</stringProp>
           </collectionProp>
-          <collectionProp name="1925978402">
+          <collectionProp name="1840715010">
             <stringProp name="53">5</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="48625">100</stringProp>
           </collectionProp>
-          <collectionProp name="-636065055">
+          <collectionProp name="1840763866">
             <stringProp name="55">7</stringProp>
             <stringProp name="1567">10</stringProp>
             <stringProp name="48625">100</stringProp>
           </collectionProp>
-          <collectionProp name="1542671659">
+          <collectionProp name="1842259307">
             <stringProp name="1567">10</stringProp>
             <stringProp name="1567">10</stringProp>
             <stringProp name="48780">150</stringProp>
           </collectionProp>
-          <collectionProp name="-241059712">
+          <collectionProp name="57573632">
             <stringProp name="1572">15</stringProp>
             <stringProp name="1572">15</stringProp>
             <stringProp name="1567">10</stringProp>
           </collectionProp>
-          <collectionProp name="-1974766313">
+          <collectionProp name="57622910">
             <stringProp name="1567">10</stringProp>
             <stringProp name="55">7</stringProp>
             <stringProp name="1815">90</stringProp>
           </collectionProp>
-          <collectionProp name="141413313">
+          <collectionProp name="58743288">
             <stringProp name="55">7</stringProp>
             <stringProp name="49">1</stringProp>
             <stringProp name="1691">50</stringProp>
@@ -98,12 +98,12 @@ to desired shape.</stringProp>
       <hashTree/>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1658384010">
+          <collectionProp name="-581452612">
             <stringProp name="48625">100</stringProp>
             <stringProp name="0">0</stringProp>
             <stringProp name="48">0</stringProp>
             <stringProp name="53585">650</stringProp>
-            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
           </collectionProp>
         </collectionProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
@@ -120,7 +120,7 @@ and produce their last samples all together without limitations.</stringProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">wordpress-elasticl-1l1c2co5onp9a-89496651.eu-west-1.elb.amazonaws.com</stringProp>
+          <stringProp name="HTTPSampler.domain">wordpress-elasticl-zk36h53w0lqz-538400363.eu-west-1.elb.amazonaws.com</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
@@ -160,7 +160,7 @@ and produce their last samples all together without limitations.</stringProp>
               </elementProp>
               <elementProp name="graphiteHost" elementType="Argument">
                 <stringProp name="Argument.name">graphiteHost</stringProp>
-                <stringProp name="Argument.value">bbdf6743.carbon.hostedgraphite.com</stringProp>
+                <stringProp name="Argument.value">0fda0fb0.carbon.hostedgraphite.com</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="graphitePort" elementType="Argument">
@@ -170,7 +170,7 @@ and produce their last samples all together without limitations.</stringProp>
               </elementProp>
               <elementProp name="rootMetricsPrefix" elementType="Argument">
                 <stringProp name="Argument.name">rootMetricsPrefix</stringProp>
-                <stringProp name="Argument.value">2fe00e69-0a9b-4fad-8f84-6bb72044576b.jmeter.</stringProp>
+                <stringProp name="Argument.value">feb968c2-bf54-44f4-8e77-be2008005652.jmeter.</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="summaryOnly" elementType="Argument">
